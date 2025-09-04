@@ -163,6 +163,10 @@ const manifold::MeshGL64* from_c(ManifoldMeshGL64* m) {
   return reinterpret_cast<manifold::MeshGL64 const*>(m);
 }
 
+manifold::MeshGL *from(ManifoldMeshGL *m) {
+  return reinterpret_cast<manifold::MeshGL *>(m);
+}
+
 OpType from_c(ManifoldOpType optype) {
   auto op = OpType::Add;
   switch (optype) {

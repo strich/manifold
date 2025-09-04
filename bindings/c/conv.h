@@ -49,6 +49,9 @@ const manifold::SimplePolygon* from_c(ManifoldSimplePolygon* m);
 const manifold::Polygons* from_c(ManifoldPolygons* m);
 const manifold::MeshGL* from_c(ManifoldMeshGL* m);
 const manifold::MeshGL64* from_c(ManifoldMeshGL64* m);
+manifold::MeshGL* from(ManifoldMeshGL* m);
+
+
 OpType from_c(ManifoldOpType op);
 CrossSection::FillRule from_c(ManifoldFillRule fillrule);
 CrossSection::JoinType from_c(ManifoldJoinType jt);

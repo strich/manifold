@@ -537,8 +537,16 @@ uint32_t* manifold_meshgl_run_index(void* mem, ManifoldMeshGL* m) {
   return copy_data(mem, from_c(m)->runIndex);
 }
 
+void manifold_meshgl_set_run_index(void* mem, unsigned int elementLength, ManifoldMeshGL* m) {
+  from(m)->runIndex = vector_of_array(reinterpret_cast<uint32_t*>(mem), elementLength);
+}
+
 uint32_t* manifold_meshgl_run_original_id(void* mem, ManifoldMeshGL* m) {
   return copy_data(mem, from_c(m)->runOriginalID);
+}
+
+void manifold_meshgl_set_run_original_id(void* mem, unsigned int elementLength, ManifoldMeshGL* m) {
+  from(m)->runOriginalID = vector_of_array(reinterpret_cast<uint32_t*>(mem), elementLength);
 }
 
 float* manifold_meshgl_run_transform(void* mem, ManifoldMeshGL* m) {
